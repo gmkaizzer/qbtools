@@ -5,7 +5,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Tools</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1a1a1a; /* Dark background */
+            color: #e0e0e0; /* Light text color for contrast */
+        }
+        header {
+            background: linear-gradient(45deg, #2e2e2e, #383838); /* Sleek dark gradient */
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        h1 {
+            font-size: 2rem;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+        }
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav .dropdown {
+            position: relative;
+        }
+        nav .dropdown > a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 0.5rem 0;
+            border-radius: 5px;
+            top: 100%;
+            left: 0;
+            min-width: 150px;
+            z-index: 1001;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        nav .dropdown-content a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #00bcd4; /* Cyan for cool accent */
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav .dropdown-content a:hover {
+            background: #00bcd4;
+            color: black; /* Inverted colors for hover */
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        main {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .tool {
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+            backdrop-filter: blur(15px);
+            padding: 1.5rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .tool:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 188, 212, 0.7); /* Cyan glow on hover */
+        }
+        .tool h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: #00bcd4; /* Cyan for cool effect */
+            text-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+        }
+        .tool p {
+            margin: 0.5rem 0 0;
+            line-height: 1.5;
+            color: #b3b3b3; /* Light grey text */
+        }
+        footer {
+            background: linear-gradient(45deg, #2e2e2e, #383838); /* Same dark gradient as header */
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.6);
+        }
+        footer p {
+            font-size: 1rem;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
     <header>
