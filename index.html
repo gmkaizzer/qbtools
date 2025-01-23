@@ -118,6 +118,18 @@
             font-size: 1rem;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
+         /* Overlay styles to block interaction */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1001;
+        }
+
         /* Popup styles */
         .popup {
             display: none;
@@ -256,8 +268,11 @@
     </a>
     </div>
     </main>
-<!-- Popup Message -->
-<div id="welcomePopup" class="popup">
+<!-- Overlay to block interaction -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Popup Message -->
+    <div id="welcomePopup" class="popup">
         <h2>Welcome to My Tool Page!</h2>
         <p>We're excited to have you here. Explore the tools and resources available!</p>
         <a href="https://www.example.com" id="popupLink">Click here to proceed</a>
@@ -267,14 +282,16 @@
         <p>&copy; 2025 User Tools made by Christian Sumbillo</p>
     </footer>
 	<script>
-        // Show the popup when the page loads
+         // Show the popup and overlay when the page loads
         window.onload = function() {
             document.getElementById("welcomePopup").style.display = "block";
+            document.getElementById("overlay").style.display = "block";
         };
 
-        // Function to close the popup
+        // Function to close the popup and remove overlay
         function closePopup() {
             document.getElementById("welcomePopup").style.display = "none";
+            document.getElementById("overlay").style.display = "none";
         }
 
         // Close the popup when the link is clicked
