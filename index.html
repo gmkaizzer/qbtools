@@ -118,6 +118,35 @@
             font-size: 1rem;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            z-index: 1002;
+            text-align: center;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #00bcd4;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .popup button:hover {
+            background: #007c8b;
+        }
     </style>
 </head>
 <body>
@@ -213,13 +242,29 @@
     <h2>SAT 1 Amnesty Wash 3.5 with Midway</h2>
     <p>Click the button below to download the Amnesty Wash.</p>
     <a href="#" target="_blank">
-        <img src="data/dl.gif" alt="Amnesty Wash Animation" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);" />
-        
+        <img src="data/dl.gif" alt="Amnesty Wash Animation" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);" />   
     </a>
     </div>
     </main>
+<!-- Popup Message -->
+<div id="welcomePopup" class="popup">
+        <h2>Welcome to My Tool Page!</h2>
+        <p>We're excited to have you here. Explore the tools and resources available!</p>
+        <button onclick="closePopup()">Close</button>
+</div>
     <footer>
         <p>&copy; 2025 User Tools made by Christian Sumbillo</p>
     </footer>
+	<script>
+        // Show the popup when the page loads
+        window.onload = function() {
+            document.getElementById("welcomePopup").style.display = "block";
+        };
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById("welcomePopup").style.display = "none";
+        }
+	</script>
 </body>
 </html>
