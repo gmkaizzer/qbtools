@@ -8,7 +8,7 @@
         }
         header {
             background: linear-gradient(45deg, #2e2e2e, #383838); /* Sleek dark gradient */
-            color: white;
+            color: black;
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
