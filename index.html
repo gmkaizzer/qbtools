@@ -147,6 +147,16 @@
         .popup button:hover {
             background: #007c8b;
         }
+        .popup a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .popup a:hover {
+            color: #007c8b;
+        }
     </style>
 </head>
 <body>
@@ -250,8 +260,9 @@
 <div id="welcomePopup" class="popup">
         <h2>Welcome to My Tool Page!</h2>
         <p>We're excited to have you here. Explore the tools and resources available!</p>
+        <a href="https://www.example.com" id="popupLink">Click here to proceed</a>
         <button onclick="closePopup()">Close</button>
-</div>
+    </div>
     <footer>
         <p>&copy; 2025 User Tools made by Christian Sumbillo</p>
     </footer>
@@ -265,6 +276,11 @@
         function closePopup() {
             document.getElementById("welcomePopup").style.display = "none";
         }
+
+        // Close the popup when the link is clicked
+        document.getElementById("popupLink").addEventListener("click", function() {
+            closePopup();
+        });
 	</script>
 </body>
 </html>
