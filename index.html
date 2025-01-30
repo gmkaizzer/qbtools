@@ -118,6 +118,59 @@
             font-size: 1rem;
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
         }
+	        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        z-index: 1001
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, .8);
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, .6);
+        z-index: 1002;
+        text-align: center
+    }
+
+    .popup button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #00bcd4;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 700;
+        transition: background .3s
+    }
+
+    .popup button:hover {
+        background: #007c8b
+    }
+
+    .popup a {
+        color: #00bcd4;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 15px
+    }
+
+    .popup a:hover {
+        color: #007c8b
+    }
     </style>
 </head>
 <body>
@@ -241,5 +294,16 @@
     <footer>
         <p>&copy; 2025 User Tools made by Christian Sumbillo</p>
     </footer>
+<!--Script-->
+	<script>
+    function closePopup() {
+        document.getElementById("welcomePopup").style.display = "none", document.getElementById("overlay").style.display = "none"
+    }
+    window.onload = function() {
+        document.getElementById("welcomePopup").style.display = "block", document.getElementById("overlay").style.display = "block"
+    }, document.getElementById("popupLink").addEventListener("click", function() {
+        closePopup()
+    })
+</script>
 </body>
 </html>
