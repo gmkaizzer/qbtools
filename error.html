@@ -1,0 +1,5382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Codes - Firmware 24.1.0-123</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #121212; color: #fff; }
+        .container { margin-top: 30px; }
+        .search-bar { margin-bottom: 20px; border-radius: 10px; }
+        .table-container { max-height: 600px; overflow-y: auto; border-radius: 10px; }
+        .table { background-color: #1e1e1e; color: #fff; border-radius: 10px; overflow: hidden; }
+        .table th { background-color: #ff6b6b; color: #fff; }
+        .table-hover tbody tr:hover { background-color: #ff6b6b; color: #fff; }
+        h2 { color: #ff6b6b; }
+        input::placeholder { color: #bbb; }
+        .footer { background-color: #1e1e1e; color: #fff; text-align: center; padding: 10px; margin-top: 20px; border-top: 2px solid #ff6b6b; }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h2>🚀 Titan Drive Error Codes for Firmware Version 24.1.0-123</h2>
+        <input type="text" id="searchInput" class="form-control search-bar bg-dark text-white" placeholder="🔍 Search error code or description...">
+        <div class="table-container mt-3">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Protocol</th>
+                        <th>Error Code</th>
+                        <th>Error Name</th>
+                        <th>Class Type</th>
+                        <th>Category</th>
+                        <th>Description</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th></th>
+                    </tr>
+                </thead>
+                <tbody id="errorTableBody">
+                    <tr>
+                        <td>DU</td>
+                        <td>1</td>
+                        <td>Too Many Commands</td>
+                        <td>4</td>
+                        <td>Command and Logic Errors</td>
+                        <td>Too many commands in sequential command message, causing overflow.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+                    </tr>
+                    <tr>
+                        <td>DU</td>
+<td>10</td>
+<td>ERROR: Command execution error.</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>A logic error occurred during command execution.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>100</td>
+<td>INFO: Pod mass zero warning</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Zero mass for a pod sent to DU indicates unknown pod mass.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>101</td>
+<td>INFO: Pod mass zero pod down warning</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>A pod with unknown pod mass has been lowered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>102</td>
+<td>INFO: Command aborted to stop</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>DU ran out of time to stop over fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>103</td>
+<td>INFO: DU told to stop.</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>DU was told to stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>104</td>
+<td>INFO: Extended fiducial command; large tolerance</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Received extended fiducial command. Large tolerance bit is set.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>105</td>
+<td>INFO: Barcode Read</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Read a barcode. The parameters show the results of the read.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>106</td>
+<td>INFO: Rotate 180 degrees</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU is commanded to perform a rotation larger than 90 degrees. For information only.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>107</td>
+<td>WARN: Unexpected transition to no control profile</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU has unexpectedly transitioned from a controlled profile to a no control profile (most likely from loss of power)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>108</td>
+<td>INFO: Command enqued while power unavailable</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Event 808 is disabled, therefore the DU will que power requiring command when power is unavailable</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>109</td>
+<td>INFO: Slowing down for expansion joint</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU is slowing down because there is an expansion joint in the path.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>11</td>
+<td>ERROR: Command taking too long.</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The current command the DU is executing took too long so the DU stopped.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>110</td>
+<td>INFO: Lift overrride complete</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU has finished putting the pod down using the pod down button.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>111</td>
+<td>INFO: Lift overrride started</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU has started to put the pod down using the pod down button.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>12</td>
+<td>ERROR: Firmware error.</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>OML</td>
+<td>A serious DU logic error occurred.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>126</td>
+<td>INFO: Position out of bounds warning</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Drive position slightly out of the allotted envelope.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>127</td>
+<td>ERROR: Position out of bounds error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>Drive position significantly out of the allotted envelope.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>128</td>
+<td>INFO: Extra nudge step</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Took an unexpected extra step while performing a Nudge move.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>129</td>
+<td>ERROR: Nudge move failure</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>ML</td>
+<td>Nudge move does not seem to be converging.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>13</td>
+<td>ERROR: No fiducial seen when enabling.</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>O</td>
+<td>Could not determine dock state; must enable over a fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>130</td>
+<td>INFO: Poor floor fiducial.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU is reporting a floor fiducial that appears to be damaged or dirty.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>131</td>
+<td>INFO: Missed floor fiducial.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU is reporting a floor fiducial that appears to be missing.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>132</td>
+<td>ERROR: Missed too many floor fiducials.</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>Missed too many floor fiducials.  The DU also loses trust in its local position estimate.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>133</td>
+<td>WARN: Docking fiducial unreadable</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Could not read docking fiducial in dock command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>134</td>
+<td>WARN: Docking fiducial not inverted</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Docking fiducial not inverted in dock command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>135</td>
+<td>WARN: Docking fiducial misplaced</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Docking fiducial not where expected in dock command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>136</td>
+<td>WARN: Could not calibrate pod camera</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Could not calibrate pod camera x and y offsets in lift command, pod fiducial not seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>137</td>
+<td>WARN: Obstacle in path</td>
+<td>2</td>
+<td>IR Obstacle</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Obstacle in path in straight command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>138</td>
+<td>INFO: Small slip.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU sensed that its wheels slipped a little bit.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>139</td>
+<td>ERROR: Large slip.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>DU sensed that its wheels slipped a lot and needs to stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>14</td>
+<td>INFO: Incorrect recovery synchronization key</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Incorrect synchronization key in recover command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>140</td>
+<td>ERROR: Moving while IDLE</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>DU not able to correct its position while IDLE possibly because high power is not available or wheels are not touching the ground.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>141</td>
+<td>INFO: Small pod shift.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU sensed that the pod it was carrying moved a little, and may degrade motion.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>142</td>
+<td>WARN: Large pod shift.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU sensed that the pod it was carrying moved a lot, and will emergency stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>143</td>
+<td>INFO: Small estimator error</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Small discrepancy between floor fiducial and estimator.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>144</td>
+<td>ERROR: Large estimator error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>Large discrepancy between floor fiducial and estimator.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>145</td>
+<td>INFO: Small lift error</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Small, but significant, error when lifting a pod up or setting it down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>146</td>
+<td>WARN: Large lift error</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Large error when lifting a pod up or setting it down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>147</td>
+<td>INFO: No floor fiducial seen after a rotate.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>After a DU rotated the fiducial was not seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>148</td>
+<td>ERROR: DU too far off course</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>Cannot execute a motion command because the DU's current position is too far away from nominal. DU executes a low severity, emergency stop command.  The DUA can recover from this condition using the MOVE command, if safe to do so.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>149</td>
+<td>INFO: Degraded Profile Warning.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU using minimum degraded velocity and acceleration parameters. Need to decide if the velocity and acceleration will be degraded via a single parameter or individually.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>15</td>
+<td>ERROR: Incorrect coordinator synchronization key</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>Incorrect synchronization key in coordinator acknowledge command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>150</td>
+<td>ERROR: Force limit error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>ML</td>
+<td>The product of acceleration and mass is too high. Degraded Profile Warning is thrown. Indicative of a bug in the setting of  the degrade factor as a function of pod mass, and should be treated as an environmental problem.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>151</td>
+<td>INFO: Drive Service Warning</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU should be brought in for service under its own power, unloaded, with a low degrade factor. Currently FCX reboots the drive once the drive is unloaded. This error accompanies other errors that limit the capabilities of the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>152</td>
+<td>INFO: Lift lowered event</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The DU reports the number of snapshots taken of the pod and floor and the number of poor snapshots among them. This data is stored so that cameras that are dirty or damaged can be found. The DUA should record this warning for diagnostic purposes.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>153</td>
+<td>ERROR: Recovery Failure Error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>DU executes a low severity, emergency stop command.  This is a terminal condition which will require human intervention.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>154</td>
+<td>INFO: Degraded Profile Off Warning</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The DU wanted to degrade, but the degrade was turned off.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>155</td>
+<td>WARN: Front bump sensor triggered</td>
+<td>2</td>
+<td>Bump Sense</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The DU's front bump sensor has triggered and the DU should be recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>156</td>
+<td>WARN: Back bump sensor triggered</td>
+<td>2</td>
+<td>Bump Sense</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The DU's back bump sensor has triggered and the DU should be recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>157</td>
+<td>CHARGE ERROR: Undock Error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>During the process of undocking from a charger the DU detected something was wrong.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>158</td>
+<td>ERROR: Wheels not touching the ground.</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU has detected that its wheels are not touching the ground. Check that the jack wheels are not engaged and that the DU does not have something underneath  it.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>159</td>
+<td>WARN: Failure to stop warning</td>
+<td>2</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The DU was commanded to stop with regular deceleration, but a high deceleration stop was required to complete the command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>16</td>
+<td>ERROR: Coordinator taking too long</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>Coordinator taking too long to respond in wait for coordinator command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>160</td>
+<td>ERROR: Failure to stop error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU was commanded to stop with high deceleration, but a hardware error required the drive to cut power to the drive motors to complete the command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>161</td>
+<td>WARN: Failed to calibrate pod camera</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Pod calibration (x and y offsets) in lift command did not converge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>162</td>
+<td>INFO: Lift raised event</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Same as event 152, but thrown after a pod raise.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>163</td>
+<td>INFO: Fiducials too close warning</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Two fiducials are too close to each other, the camera can't read the second one.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>164</td>
+<td>INFO: Fiducial offset with unexpected path</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The data in the fiducial table anticipated a path towards a different fiducial, and no adaptation could occur.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>165</td>
+<td>CHARGE ERROR: Dock Check IR error</td>
+<td>2</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>A dock command did not proceed because the IR sensors on the back fairing did not see the expected target</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>166</td>
+<td>ERROR: Fiducial Camera Inverted</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The camera imay be mounted improperly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>167</td>
+<td>ERROR: Distance exceeded without Fiducial Opportunity</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU was commanded to move along a course that did not include coordinates with fiducials.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>168</td>
+<td>INFO: Swivel Pod Warning.</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU has compensated for small rotational shifts of a lightweight pod by rotating the lifter, and may degrade motion.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>169</td>
+<td>WARN: Swivel Pod Critical.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU has compensated for small rotational shifts of a lightweight pod by rotating the lifter, and will emergency stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>17</td>
+<td>ERROR: Coordinator failed wait</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>Coordinator failed the wait for coordinator command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>170</td>
+<td>ERROR: No Fiducial For Lift.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>DU commanded to lift or lower a pod that is not in view of a fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>171</td>
+<td>WARN: Nudge Orientation.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Unable to execute Nudge at current orientation.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>172</td>
+<td>WARN: Nudge Target Range.</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Unable to execute Nudge without leaving bounds of cell.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>173</td>
+<td>INFO: Invalid fiducial for estimate warning</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The fiducial for an estimator update is invalid, so no update was performed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>174</td>
+<td>ERROR: Bump while rotate error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>A bump error occurred while rotating.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>175</td>
+<td>INFO: Nudge target out of range warning</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>When being told to nudge the DU realized that the nudge target is outside the safe range.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>176</td>
+<td>INFO: Pod calibration skipped warning</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Pod camera was not calibrated while DU not in tight view of floor fiducial</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>177</td>
+<td>WARN: Fiducial adapt new rotation large warning</td>
+<td>1</td>
+<td></td>
+<td>Navigation Errors</td>
+<td></td>
+<td></td>
+<td>The last fiducial adaptation yielded a large offset - check the sticker</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>178</td>
+<td>WARN: Fiducial adapt rotation difference warning</td>
+<td>1</td>
+<td></td>
+<td>Navigation Errors</td>
+<td></td>
+<td></td>
+<td>The difference between the latest fid adaption and the database is large - check the sticker and surrounding area</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>179</td>
+<td>ERROR: Target Overshoot Error</td>
+<td>2</td>
+<td></td>
+<td>Navigation Errors</td>
+<td></td>
+<td></td>
+<td>The drive unit overshot its target too much.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>18</td>
+<td>ERROR: DU Shutdown Warning</td>
+<td>2</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU is about to power off</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>180</td>
+<td>INFO: Rolling</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU rolled while it was idle and had to use station keeping to return to its position.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>181</td>
+<td>ERROR: Navigation Discrepancy</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The motor control is not tracking a predicted path.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>182</td>
+<td>WARN: Rate gyro disabled</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The rate gyro was disabled.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>183</td>
+<td>ERROR: Turntable spinning while IDLE</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Navigation errors</td>
+<td></td>
+<td>O</td>
+<td>DU not able to keep turntable steady while IDLE possibly because high power is not available and brakes have failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>184</td>
+<td>INFO: Switch between estimators failed</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>The switch between the dead-reckoning and the inertial estimate failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>185</td>
+<td>ERROR: Coast stop</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU coasted to a stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>186</td>
+<td>ERROR: Charger not communicating with DU</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The charger is not communicating with the DU.  It is likely not turned on.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>187</td>
+<td>INFO: Charge interrupted by DUSC event</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The charge has been interrupted by a safety event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>188</td>
+<td>INFO: Undock Complete</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The DU has executed an UNDOCK command to disconnect from a charger.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>189</td>
+<td>INFO: Dock to Charger Started</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The DU has executed a DOCK command to connect to a charger.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>19</td>
+<td>INFO: Write to read only parameter</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Attempt to write to a read only parameter in a set parameters command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>190</td>
+<td>INFO: Charge Complete</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The DU detected that charging has stopped.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>191</td>
+<td>INFO: Battery EQ Started</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Battery equalization has started.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>192</td>
+<td>INFO: Battery EQ Ended</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Battery equalization has ended.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>193</td>
+<td>INFO: BMID Data</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Unexpected content discovered in the DU's battery information flash module.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>194</td>
+<td>INFO: EQ voltage lower than expected or duration was too short.</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Equalization event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>195</td>
+<td>CHARGE WARN: Old Batteries</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Possible indicator for replacing batteries.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>196</td>
+<td>INFO: EQ Timer shorter than expected</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Equalization event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>197</td>
+<td>CHARGE ERROR: Battery Voltage Too High</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>This error is only thrown while the drive is in a charger. The battery voltage has been seen to be too high during the initial charge phase.  The drive should be removed from the floor until it is inspected by Kiva maintenance.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>198</td>
+<td>CHARGE WARN: EQ Battery temperature is too high</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>Indicator for problems during the battery equalize process the batteries should be inspected.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>199</td>
+<td>CHARGE WARN: Battery temperature sensor damaged</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The data from the battery temperature sensor is not valid, the sensor should be replaced. The batteries will charge slowly until this is done.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>2</td>
+<td>ERROR: Inconsistent command</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>Command was not possible given the current state of the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>200</td>
+<td>INFO: Recovery Complete</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Drive was successfully recovered from an error.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>21</td>
+<td>ERROR: Motion coordinates out of range</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>Coordinates from FCX to the DU were out of range.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>210</td>
+<td>INFO: SC: Load successful</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive successfully loaded a package.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>211</td>
+<td>INFO: SC: Eject successful</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive successfully ejected a package.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>212</td>
+<td>WARN: SC: Unexpected package detected</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive detected package while being unladen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>213</td>
+<td>WARN: SC: Package loss detected</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive detected a package loss while being laden.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>214</td>
+<td>WARN: SC: No package ejected</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center was unable to confirm a package eject command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>215</td>
+<td>ERROR: SC: Package jam</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive detected a package jam and needs to be manually recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>216</td>
+<td>ERROR: SC: Package Sensor Error</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Sort Center drive detected a fault with one of the package sensors</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>22</td>
+<td>INFO: Coordinator Message ID Sync Warning</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>The identifiers used to keep coordinator (RADIO) and controller (MLB) are out of sync.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>220</td>
+<td>WARN: SC: Conveyor misaligned warning</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Pegasus Large drive must have the conveyor platter aligned to cardinal direction with respect to the drive unit base when enabling.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>221</td>
+<td>ERROR: SC: Unable to complete conveyor localization</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU executed an e-stop because it could not read the fiducial or barcode of the PL conveyor platter. Check the internal upward-facing camera and internal fiducial for obstructions or damage.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>23</td>
+<td>ERROR: DU Set Down Pod Warning</td>
+<td>2</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU set down the pod for an error condition</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>24</td>
+<td>ERROR: DU Reboot Required</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU cannot be auto-recovered by software and needs to be power-cycled</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>25</td>
+<td>ERROR: Parameter critically inconsistent</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>A critical parameter is out of range and cannot be repaired.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>256</td>
+<td>INFO: Right drive motor feedback warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The right drive motor is not tracking its reference very well.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>257</td>
+<td>ERROR: Right drive motor feedback error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The right drive motor has too much error tracking its reference.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>258</td>
+<td>INFO: Left drive motor feedback warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The left drive motor is not tracking its reference very well.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>259</td>
+<td>ERROR: Left drive motor feedback error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The left drive motor has too much error tracking its reference.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>26</td>
+<td>ERROR: Energy parameter rollover</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The energy parameter rolled over. This should never happen and indicates a serious error.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>260</td>
+<td>INFO: Turntable motor feedback warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor is not tracking its reference very well.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>261</td>
+<td>ERROR: Turntable motor feedback error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The turntable motor has too much error tracking its reference.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>262</td>
+<td>INFO: Right drive motor PWM warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The right drive motor PWM was too high and the drive was degraded.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>263</td>
+<td>INFO: Left drive motor PWM warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The left drive motor PWM was too high and the drive was degraded.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>264</td>
+<td>INFO: Turntable motor PWM warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor PWM was too high and the drive was degraded.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>265</td>
+<td>INFO: Right wheel encoder discrepancy warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The right wheel and motor encoders differ.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>266</td>
+<td>ERROR: Right wheel encoder discrepancy error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>DU will no longer use wheel encoders for navigation unless it is rebooted.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>267</td>
+<td>INFO: Left wheel encoder discrepancy warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The left wheel and motor encoders differ.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>268</td>
+<td>ERROR: Left wheel encoder discrepancy error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>DU will no longer use wheel encoders for navigation unless it is rebooted.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>269</td>
+<td>INFO: Turntable redundant encoder discrepancy warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The turntable redundant and motor encoders differ.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>27</td>
+<td>INFO: Internal FW event</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Internal FW event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>270</td>
+<td>ERROR: Turntable redundant encoder discrepancy error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The turntable redundant and motor encoders differ too much.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>271</td>
+<td>INFO: Lifter home sensor warning.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>DU could not reset Taz position in lift command. If too many consecutive warnings are received, the Taz position may drift.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>272</td>
+<td>ERROR: High-Power Drive Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>Drive high power off when it should have been on.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>273</td>
+<td>ERROR: High-Power Turntable Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>L</td>
+<td>Turntable high power off when it should have been on.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>274</td>
+<td>WARN: Rate gyro offset update error.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Rate gyro is disabled, must reboot to re-enable.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>275</td>
+<td>WARN: Rate gyro slope update error.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Rate gyro is disabled, must reboot to re-enable.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>276</td>
+<td>WARN: Back IR sensor disabled</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>At least one back obstacle sensor is not operational in check ir command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>277</td>
+<td>WARN: Front IR sensor disabled</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>At least one front obstacle sensor is not operational in check ir command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>278</td>
+<td>INFO: Floor camera fiducial position unseen during barcode read.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>During a read barcode command the floor camera failed to find the position of the fiducial.</td>
+<td>Dirty/damaged fiducial - clean/replace fiducial sticker, Floor fiducial not in floor camera FOV -  reposition DU </td>
+</tr>
+<tr>
+<td>DU</td>
+<td>279</td>
+<td>INFO: Floor barcode failed</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>A floor barcode fiducial could not be read during a read barcode command.</td>
+<td>Floor barcode dirty/damaged - replace fiducial sticker, Floor camera out of focus - focus floor camera</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>28</td>
+<td>ERROR: Non-sequential command not completed</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>OML</td>
+<td>A non-sequential command was not completed in a single frame.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>280</td>
+<td>INFO: Pod camera fiducial position unseen during barcode read.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>During a read barcode command the pod camera failed to find the position of the fiducial.</td>
+<td>Dirty/damaged fiducial - clean/replace fiducial sticker, Pod fiducial not in pod camera FOV -  reposition DU </td>
+</tr>
+<tr>
+<td>DU</td>
+<td>281</td>
+<td>INFO: Pod barcode failed</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>A pod barcode fiducial could not be read during a read barcode command.</td>
+<td>Pod barcode dirty/damaged - replace fiducial sticker, Pod camera out of focus - focus floor camera</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>282</td>
+<td>INFO: Instantaneous battery voltage is low.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The DU battery voltage is lower than expected.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>283</td>
+<td>CHARGE ERROR: Instantaneous battery voltage is critically low.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU battery voltage is too low, shutting down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>284</td>
+<td>INFO: Average battery voltage is low.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The DU battery voltage is lower than expected, the DU should be charged ASAP.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>285</td>
+<td>CHARGE ERROR: Average battery voltage is critically low.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU battery voltage is too low, shutting down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>286</td>
+<td>INFO: Charge is low.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Charge state of the DU is low and the DU should be charged.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>287</td>
+<td>CHARGE WARN: Charge is critically low.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Charge state of the DU is low and the DU should be charged ASAP.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>288</td>
+<td>CHARGE WARN: Redock required</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The DU needs to be redocked into the charger</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>289</td>
+<td>INFO: State of charge corrected using voltage</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Battery voltage gave much lower estimate of charge than current estimate. Using voltage derived estimate instead. Mask should be cleared</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>29</td>
+<td>INFO: Inconsistent command waiting for recover</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU is waiting to be recovered and received a command that it cannot execute until recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>290</td>
+<td>INFO: DU firmware outer loop timing.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Time between successive outer loops too large.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>291</td>
+<td>WARN: Left motor encoder count warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Missing occasional encoder counts.  Should be flagged for maintenance.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>292</td>
+<td>WARN: Right motor encoder count warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Missing occasional encoder counts.  Should be flagged for maintenance.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>293</td>
+<td>WARN: Left wheel encoder count warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Missing occasional encoder counts.   Should be flagged for maintenance.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>294</td>
+<td>WARN: Right wheel encoder count warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Missing occasional encoder counts.   Should be flagged for maintenance.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>295</td>
+<td>CHARGE ERROR: Not enough working IR sensors to dock.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>There are not enough IR sensors working to dock to a charger.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>296</td>
+<td>ERROR: Floor fiducial unreadable error.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU executed an e-stop because it could not read the floor fiducial or barcode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>297</td>
+<td>ERROR: Under Pod fiducial unreadable error.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>L</td>
+<td>The DU executed an e-stop because it could not read the fiducial or barcode of a pod that is still on the ground.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>298</td>
+<td>ERROR: Large Pod Shift: Pod no longer Visible.</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU executed an e-stop because it could not read the fiducial or barcode of a lifted pod.  Either the camera is not functioning or the pod has fallen off.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>299</td>
+<td>INFO: State of Charge estimate updated while idle.</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>This is done regularly to check the SOC estimate and recode data.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>3</td>
+<td>ERROR: Invalid sequential command content.</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>A sequential command was given with information that was not valid.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>30</td>
+<td>ERROR: Command can not be executed</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>CML</td>
+<td>The DU is unrecoverable and received and inconsistent command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>300</td>
+<td>INFO: Lifter redundant encoder discrepancy warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The lifter redundant and motor encoders differ.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>301</td>
+<td>ERROR: Lifter redundant encoder discrepancy error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The lifter redundant and motor encoders differ too much.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>302</td>
+<td>INFO: Lifter motor feedback warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor is not tracking its reference very well.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>303</td>
+<td>ERROR: Lifter motor feedback error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>The lifter motor has too much error tracking its reference.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>304</td>
+<td>ERROR: Right Brake Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The right drive brake did not disengage when requested to.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>305</td>
+<td>ERROR: Left Brake Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The left drive brake did not disengage when requested to.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>306</td>
+<td>ERROR: Lifter Brake Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The lifter drive brake did not disengage when requested to.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>307</td>
+<td>INFO: Lift-Up Sensor Triggered</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The lifter upper limit sensor has been seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>308</td>
+<td>INFO: Lift-Down Sensor Triggered</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The lifter lower limit sensor has been seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>309</td>
+<td>INFO: Lifter motor PWM warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor PWM was too high and the drive was degraded.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>31</td>
+<td>INFO: Straight command destination invalid error</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Given straight command cannot be executed due to invalid destination</td>
+<td>For debug only</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>310</td>
+<td>ERROR: High-Power Lifter Failure</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>L</td>
+<td>Lifter high power off when it should have been on.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>311</td>
+<td>INFO: Interupt handeling warning</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Interupts are not operating correctly. Drive Unit amy be able to operate through this.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>312</td>
+<td>WARN: Floor camera control error.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Camera is not responding to configuration settings.  The Degraded Profile Warning is thrown. A Drive Service Warning is thrown to accompany this error i) immediately if unloaded and ii) after a pod has been put down if loaded.</td>
+<td>Reset DU; if issue persists, replace MEA</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>313</td>
+<td>WARN: Pod camera control error.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Camera is not responding to configuration settings.  The Degraded Profile Warning is thrown. A Drive Service Warning is thrown to accompany this error i) immediately if unloaded and ii) after a pod has been put down during normal operation if loaded.</td>
+<td>Reset DU; if issue persists, replace MEA</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>314</td>
+<td>ERROR: Floor camera watchdog error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>The floor camera bios timed out during an operation.</td>
+<td>Reset DU; if issue persists, replace MEA</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>315</td>
+<td>ERROR: Pod camera watchdog error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>L</td>
+<td>The pod camera bios timed out during an operation.</td>
+<td>Reset DU; if issue persists, replace MEA</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>317</td>
+<td>ERROR: Lifter home sensor error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>L</td>
+<td>DU could not reset Taz position in lift command too many times.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>318</td>
+<td>INFO: DU firmware inner loop timing.</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Time between successive inner lops too large.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>319</td>
+<td>INFO: Floor camera is saving logs</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The floor camera saved images.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>32</td>
+<td>WARN: Fiducial offsets too large error</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Fid offset give to DU is too large - we reject it</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>320</td>
+<td>INFO: Pod camera is saving logs</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The pod camera saved images.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>321</td>
+<td>ERROR: Camera had an unrecoverable event</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The camera won't respond from now on, reboot the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>33</td>
+<td>INFO: Fiducial offsets too large warning</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>Fid offset give to DU is too large</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>330</td>
+<td>WARN: Rate gyro noise nonzero mean warning</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Replace gyro if happens too often.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>331</td>
+<td>WARN: Rate gyro noise variance too large warning</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Replace gyro if happens too often.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>332</td>
+<td>INFO: ODS initialization failure</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>ODS is not responding to initialization commands</td>
+<td>Check connection of ethernet cable between MEA and backplane for a loose connection.  If no connection issue found, replace ODS</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>333</td>
+<td>INFO: ODS watchdog timeout</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>ODS watchdog timed out</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>334</td>
+<td>ERROR: ODS communication timeout</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>ODS data timeout.</td>
+<td>Check connection of ethernet cable between MEA and backplane for a loose connection.</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>335</td>
+<td>INFO: Rate gyro initialization failure</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>Rate gyro failed to initialize</td>
+<td>Replace ODS module</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>336</td>
+<td>INFO: Floor Camera Operation Error</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>The floor camera operation state machine threw an event and reset itself.</td>
+<td>Replace ODS module</td>
+</tr>
+<tr>
+<td>DU</td>
+<td>339</td>
+<td>INFO: ODS charger measurement taken</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>The DU was asked to test the ODS in the charger</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>34</td>
+<td>INFO: Coordinate system change warning</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>FCX changed the global coordinates of a drive that already trusted its global position</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>340</td>
+<td>INFO: ODS query retry limit exceeded</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>ODS attempted multiple times to send a query message with no response.  </td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>341</td>
+<td>INFO: ODS time out while enabling</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU tried to use the ODS and failed to enable it.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>342</td>
+<td>ERROR: Left motor PWM at MAX level for too long</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>Left motor does not seem to be responding to control effort. Run the drive motor bench test.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>343</td>
+<td>ERROR: Right motor PWM at MAX level for too long</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>Right motor does not seem to be responding to control effort. Run the drive motor bench test.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>344</td>
+<td>ERROR: Lifter motor PWM at MAX level for too long</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>Lifter motor does not seem to be responding to control effort. Run the lifter motor bench test.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>345</td>
+<td>ERROR: Turntable motor PWM at MAX level for too long</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>OML</td>
+<td>Turntable motor does not seem to be responding to control effort. Run the turntable motor bench test.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>346</td>
+<td>INFO: Large lifter position correction during normal operation.</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Inspect the cables and connectors on the lifter assembly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>347</td>
+<td>WARN: Double-snap large lateral error</td>
+<td>1</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>During a double-snap the camera took two consecutive images with large y error between them.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>348</td>
+<td>WARN: Lifter reached upper limit while moving</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>While driving the lifter motor up (powered) we reached the upper limit sensor</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>349</td>
+<td>WARN: Lifter reached lower limit while moving</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>While driving the lifter motor down (powered) we reached the lower limit sensor</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>35</td>
+<td>INFO: Coordinate system cleared warning</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>FCX cleared the drive trust in global position</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>350</td>
+<td>ERROR: Barcode orientation inconsistency</td>
+<td>3</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td>OML</td>
+<td>Drive position inconsistent with relative barcode orientations.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>36</td>
+<td>WARN: Electronics module replacement detected</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The serial number for an electronics board differs from the most recent memorized parameter.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>37</td>
+<td>ERROR: Parameters on power board not set</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>During boot-up the power board was not initialized properly. This is a FW bug.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>39</td>
+<td>ERROR: Firmware version mismatch</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>There is a mismatch between the version of the actual firmware running on a subsystem and the expected version of the release.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>4</td>
+<td>ERROR: Invalid non-sequential command content.</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>A non-sequential command was given with information that was not valid.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>450</td>
+<td>INFO: Generic event 1 repeat</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>A repeatable generic event was thrown (event 1)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>451</td>
+<td>INFO: Generic event 2 repeat</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>A repeatable generic event was thrown (event 2)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>452</td>
+<td>INFO: Generic event 3 once</td>
+<td>0</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>A generic event 3 was thrown and left masked.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>453</td>
+<td>INFO: Generic event 4 once</td>
+<td>0</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>A generic event 4 was thrown and left masked.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>5</td>
+<td>ERROR: Sequential command does not exist.</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>A sequential command sent by FCX is unknown to the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>500</td>
+<td>INFO: DU Boot</td>
+<td>0</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td></td>
+<td>The DU has booted up or rebooted.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>501</td>
+<td>ERROR: DU batteries too low shutting down.</td>
+<td>3</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td>ML</td>
+<td>The DU has a pod lifted and its batteries have been low for too long. The DU puts down its pod (F drives only) and turns off.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>502</td>
+<td>WARN: Event dropped</td>
+<td>0</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td></td>
+<td>One or more events were not reported to DUA due to buffer limitations inside the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>503</td>
+<td>INFO: DU info check failed</td>
+<td>0</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td></td>
+<td>The attempt to get the firmware version and serial number failed</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>504</td>
+<td>INFO: DU firmware version</td>
+<td>0</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td></td>
+<td>The error parameters contain the firmware release version</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>505</td>
+<td>INFO: DU serial number</td>
+<td>0</td>
+<td></td>
+<td>Drive Unit Events</td>
+<td></td>
+<td></td>
+<td>The error parameters contain the backplane serial number.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>506</td>
+<td>ERROR: DU cannot determine configuration</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The Drive unit cannot determine its chassis and motor configuration.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>507</td>
+<td>INFO: DU Entered Diag Mode</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>OML</td>
+<td>The drive unit was commanded to enter diagnostic mode.  </td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>508</td>
+<td>ERROR: Legacy compatibility configuration mismatch</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU has EEPROM inconsistencies between the MEA and backplane regarding V2 pod compatibility</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>599</td>
+<td>INFO: Report ARIMA state</td>
+<td>0</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>DU reports the current ARIMA status in the parameters.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>6</td>
+<td>ERROR: Non-sequential command does not exist.</td>
+<td>4</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>C</td>
+<td>A non-sequential command sent by FCX is unknown to the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>600</td>
+<td>ERROR: Bios error buffer full</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td>OML</td>
+<td>The bios has thrown more errors than the buffer can hold.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>601</td>
+<td>WARN: Subsystem comms error</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>One of the subsystems had a communication failure.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>602</td>
+<td>INFO: Subsystem comms intermittent</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>One of the subsystems had an intermittent communication error, but recovered.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>603</td>
+<td>WARN: Bios Comm Init Failure</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>610</td>
+<td>WARN: Right motor amp commutation failed</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The right motor commutation has failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>611</td>
+<td>WARN: Left motor amp commutation failed</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The left motor commutation has failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>612</td>
+<td>WARN: Lifter motor amp commutation failed</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor commutation has failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>613</td>
+<td>INFO: Right amp current limit</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The right motor amplifier has limited its current output briefly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>614</td>
+<td>INFO: Left amp current limit</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The left motor amplifier has limited its current output briefly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>615</td>
+<td>INFO: Lifter amp current limit</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor amplifier has limited its current output briefly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>616</td>
+<td>ERROR: Power Failure</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td>OML</td>
+<td>The power system has detected a serious problem.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>617</td>
+<td>INFO: Power Keep Alive Warning</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The power system has detected that something may be wrong.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>618</td>
+<td>ERROR: E-Stop pressed</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td>OML</td>
+<td>E-Stop button is pressing in or the cable is damaged.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>619</td>
+<td>ERROR: Battery sensor error</td>
+<td>3</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td>ML</td>
+<td>Problem with sensing the battery voltage (only checked at power-up).</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>620</td>
+<td>WARN: Analog to digital conversion error</td>
+<td>0</td>
+<td></td>
+<td>Subsystem errors</td>
+<td></td>
+<td></td>
+<td>Problem with at least one of the ADC converters (only checked at power-up).</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>621</td>
+<td>WARN: Check Battery Terminals</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Check that the battery terminals are properly torqued and no corrosion is present</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>622</td>
+<td>WARN: Brake manual disengage</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>A brake is in manual override. Place back in automatic mode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>623</td>
+<td>ERROR: Over temperature error</td>
+<td>3</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td>ML</td>
+<td>The power board is too hot. Power down the DU. The power board may require servicing.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>624</td>
+<td>WARN: Amplifier comms error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Communication with the amps has failed. Reboot the drive. Replace the electronics if this problem persists.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>625</td>
+<td>INFO: Amplifier comms warning</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>626</td>
+<td>WARN: Gyro comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>627</td>
+<td>INFO: Gyro comm intermittent</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>628</td>
+<td>WARN: BMID comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>629</td>
+<td>INFO: BMID comm intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>630</td>
+<td>WARN: Radio comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>631</td>
+<td>INFO: Radio comm intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>632</td>
+<td>WARN: Fairing Controller comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>633</td>
+<td>INFO: Fairing Controller comm intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>634</td>
+<td>WARN: Camera comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>635</td>
+<td>INFO: Camera comm intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>636</td>
+<td>WARN: Power Supervisor comm error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>637</td>
+<td>INFO: Power Supervisor comm intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>638</td>
+<td>WARN: Daughter Board Comm Error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>639</td>
+<td>INFO: Daughter Board Comm Intermittent</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>Bios subsystem comm intermittent</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>640</td>
+<td>WARN: Temperature Sensor Error</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>A thermistor has failed</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>641</td>
+<td>WARN: Gyro Self Test Failure</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>V2 electronics gyro self test failure on X axis</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>642</td>
+<td>WARN: Gyro Self Test Failure</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>V2 electronics gyro self test failure on Z axis</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>643</td>
+<td>WARN: Gyro Self Test Failure</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>V1 electronics gyro self test failure NEG</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>644</td>
+<td>WARN: Gyro Self Test Failure</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>V1 electronics gyro self test failure POS</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>645</td>
+<td>WARN: Gyro Self Test Failure</td>
+<td>1</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td></td>
+<td>V1 electronics gyro self test failure BTH</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>646</td>
+<td>WARN: Control beat failure</td>
+<td>0</td>
+<td></td>
+<td>Bios errors</td>
+<td></td>
+<td>OML</td>
+<td>Internal FW failure to keep the control beat active.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>647</td>
+<td>WARN: Turntable motor amp commutation failed</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor commutation has failed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>648</td>
+<td>INFO: Turntable amp current limit</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor amplifier has limited its current output briefly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>649</td>
+<td>INFO: Right motor amp commutation intermittent</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The right motor commutation showed inconsistencies.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>650</td>
+<td>INFO: Left motor amp commutation intermittent</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The left motor commutation showed inconsistencies.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>651</td>
+<td>INFO: Lifter motor amp commutation intermittent</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor commutation showed inconsistencies.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>652</td>
+<td>INFO: Turntable motor amp commutation intermittent</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor commutation showed inconsistencies.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>653</td>
+<td>ERROR: BMS Comm Error</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Comm Error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>654</td>
+<td>WARN: BMS Detected Overvoltage</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Overvoltage</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>655</td>
+<td>WARN: BMS Detected Undervoltage</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Undervoltage</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>656</td>
+<td>WARN: BMS Detected Overtemp</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Overtemp</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>657</td>
+<td>WARN: BMS Detected Undertemp</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Undertemp</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>658</td>
+<td>WARN: BMS Detected Overcurrent (Charging)</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Overcurrent (Charging)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>659</td>
+<td>WARN: BMS Detected Overcurrent (Discharging)</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>BMS Detected Overcurrent (Discharging)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>660</td>
+<td>ERROR: DUSC Fault</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>Parameters describing a DUSC failure record.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>661</td>
+<td>ERROR: DUSC PowerAck Failure</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>DUSC is not permitting high power which may be explained by another event or firmware error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>662</td>
+<td>INFO: DUSC Event</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>Parameters describing a DUSC warning or informational record.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>663</td>
+<td>INFO: DUSC Comm Warning</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>MLB&lt;-&gt;DUSC Comm Warning</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>664</td>
+<td>INFO: DUSC Comm Error</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>MLB&lt;-&gt;DUSC Comm Error</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>665</td>
+<td>INFO: Power Interface Unavailable</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>DUBIOSPowerIF has become unavailable due to subsystem, parameter describes cause</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>666</td>
+<td>WARN: BMS CAN buffer overrun</td>
+<td>1</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The BMS has filled the CAN buffer on the MLB</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>667</td>
+<td>WARN: BMS Voltage Sensor Error</td>
+<td>2</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The BMS voltage sensor is not functioning properly</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>668</td>
+<td>WARN: BMS Temperature Sensor Error</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The BMS temperature sensor is not functioning properly</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>669</td>
+<td>ERROR: Current Limit Time-out Error</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td>OML</td>
+<td>The power board has been in current limit for too long.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>670</td>
+<td>ERROR: Total current limit exceeded</td>
+<td>3</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td>ML</td>
+<td>The total current limit for the power board has been exceeded.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>671</td>
+<td>INFO: Right motor voltage saturation</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The right locomotion motor saturated its driving voltage briefly.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>672</td>
+<td>INFO: Left motor voltage saturation</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The left locomotion motor saturated its driving voltage briefly</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>673</td>
+<td>INFO: Lifter voltage saturation</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The lifter motor saturated its driving voltage briefly</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>674</td>
+<td>INFO: Turntable voltage saturation</td>
+<td>0</td>
+<td></td>
+<td>BIOS errors</td>
+<td></td>
+<td></td>
+<td>The turntable motor saturated its driving voltage briefly</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>7</td>
+<td>WARN: Parameter out of range.</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The recorded parameter was too large or too small when FCX was trying to change it, or the DU was trying to adapt it.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>768</td>
+<td>WARN: Coordinator NAK count.</td>
+<td>4</td>
+<td></td>
+<td>Coordinator Events</td>
+<td></td>
+<td></td>
+<td>Coordinator has seen too many NAKs from FCX.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>769</td>
+<td>ERROR: Coordinator lost Comms to MLB.</td>
+<td>3</td>
+<td></td>
+<td>Coordinator Events</td>
+<td></td>
+<td>C</td>
+<td>Coordinator has been unable to communicate with the MLB for more than 5 minutes.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>770</td>
+<td>INFO: Invalid request to clear events.</td>
+<td>0</td>
+<td></td>
+<td>Coordinator Events</td>
+<td></td>
+<td></td>
+<td>Request to clear events does not start at oldest event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>771</td>
+<td>INFO: DU timeout from FCX warning</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU has not heard from FCX for too long.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>772</td>
+<td>INFO: DU timeout from FCX</td>
+<td>1</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The DU has not heard from FCX for too long and may soon shut down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>773</td>
+<td>ERROR: Event buffer overflow</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>OML</td>
+<td>The DU event buffer overflowed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>774</td>
+<td>INFO: Change wifi cred status</td>
+<td>1</td>
+<td></td>
+<td>Coordinator Events</td>
+<td></td>
+<td></td>
+<td>An event indicating WiFi Change command execution status.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>775</td>
+<td>INFO: Change DUA Address</td>
+<td>1</td>
+<td></td>
+<td>Coordinator Events</td>
+<td></td>
+<td></td>
+<td>The drive has been asked to bind to a new DUA address (UDP)</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>8</td>
+<td>INFO: Parameter does not exist.</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The parameter that FCX was trying to read or set is unknown by the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>800</td>
+<td>ERROR: DUSC Not Present</td>
+<td>3</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td>OML</td>
+<td>No DU safety controller detected.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>801</td>
+<td>ERROR: DUSC Not Functional</td>
+<td>3</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td>OML</td>
+<td>The DU safety controller is not connected to the power system correctly, and is not allowed to operate on this safety-rated floor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>802</td>
+<td>ERROR: DUSC Lockout</td>
+<td>3</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td>OML</td>
+<td>The safety controller is locked out for estop or a fault condition.  Manual reset required.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>803</td>
+<td>WARN: DUSC Not Functional</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The floor does not require a safety controller; however one has been detected on the DU that is not connected to the power system.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>804</td>
+<td>INFO: DUSC Bypass</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has started operating in bypass mode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>805</td>
+<td>INFO: DUSC Stop</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU is stopping to prepare for safety immobilization.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>806</td>
+<td>INFO: DUSC Immobilized</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has been immobilized.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>807</td>
+<td>INFO: DUSC Run</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has restored power to its drive motors and can accept movement commands.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>808</td>
+<td>INFO: DUSC Reject Command</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has rejected a command that required power while immobilized.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>809</td>
+<td>WARN: DUSC Immobilize while moving</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Safety Controller Events</td>
+<td></td>
+<td>OML</td>
+<td>The DU was not able to stop motion before the DUSC cut the power relay; requires manual recovery.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>810</td>
+<td>WARN: Brakes disengaged on CE drive</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>Lifter may not hold up pod while power is immobilized; check switch on lifter motor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>811</td>
+<td>WARN: Right motor thermal sensor error</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The right motor has overheated or has a bad sensor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>812</td>
+<td>WARN: Left motor thermal sensor error</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The left drive motor has overheated or has a bad sensor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>813</td>
+<td>WARN: Lifter motor thermal sensor error</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The lifter drive motor has overheated or has a bad sensor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>814</td>
+<td>WARN: Left motor overspeed</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The left motor speed sensor has indicated an overspeed violation during BYPASS operation.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>815</td>
+<td>WARN: Right motor overspeed</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The right motor speed sensor has indicated an overspeed violation during BYPASS operation.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>816</td>
+<td>ERROR: Power relay cut while moving</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Safety Controller Events</td>
+<td></td>
+<td>OML</td>
+<td>Possible HW error.  Low voltage reading from power board without notice from DUSC that power relay is cut</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>817</td>
+<td>INFO: DUSC Stop abort command</td>
+<td>2</td>
+<td>Drive Error</td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU interrupted a motion command in response to a safety event</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>818</td>
+<td>WARN: Power relay cut while IDLE</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>Possible HW error.  Low voltage reading from power board without notice from DUSC that power relay is cut. Not fatal when idle.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>819</td>
+<td>WARN: Turntable motor thermal sensor error</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The turntable drive motor has overheated or has a bad sensor.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>820</td>
+<td>WARN:  Power relay open briefly while moving</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>Power relay open briefly while moving (unexpected). Will see 816 as well if this is not a transient issue.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>821</td>
+<td>INFO:  Power relay open briefly while idle</td>
+<td>0</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>Power relay open briefly while idle (unexpected). Will see 818 as well if this is not a transient issue.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>822</td>
+<td>INFO: DUSC Limited</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has restored power to its drive motors and can accept movement commands.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>823</td>
+<td>INFO: SRBRS Stop</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU is stopping as it has entered the immobilization range of a SRBRS badge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>824</td>
+<td>INFO: SRBRS Immobilized</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU has been immobilized by a nearby SRBRS badge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>825</td>
+<td>INFO: SRBRS Limited</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU is operating at a limited speed due to a detected SRBRS badge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>826</td>
+<td>INFO: SRBRS SLF Mode</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU is operating at a SLF Reduced speed due to a detected SRBRS badge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>827</td>
+<td>INFO: SRBRS ELF Mode</td>
+<td>1</td>
+<td></td>
+<td>Safety Controller Events</td>
+<td></td>
+<td></td>
+<td>The DU is operating at a ELF Reduced speed due to a detected SRBRS badge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>850</td>
+<td>ERROR: Brief battery overvoltage</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>A brief overvoltage was detected via the BMS</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>851</td>
+<td>ERROR: Sustained battery overvoltage</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>A lengthy overvoltage was detected via the BMS</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>852</td>
+<td>ERROR: Brief battery overcurrent</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>A brief overcurrent was detected via the BMS</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>853</td>
+<td>ERROR: Sustained battery overcurrent</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>A lengthy overcurrent was detected via the BMS</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>854</td>
+<td>ERROR: Battery overtemperature</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>A battery overtemperature was detected</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>855</td>
+<td>ERROR: Excessive battery temperature delta</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>Battery temperature has risen too much since last charge began</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>856</td>
+<td>ERROR: Thermal runaway threshold exceeded</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>The (lead-acid) thermal runaway detection has tripped.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>857</td>
+<td>ERROR: Batteries overcharged</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>Well above the battery capacity has been charged during this charge cycle.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>858</td>
+<td>ERROR: Charger could not be disabled</td>
+<td>3</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td>ML</td>
+<td>The drive unit detected the charger is still supplying current and cannot undock.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>859</td>
+<td>WARN: Charge failed</td>
+<td>0</td>
+<td></td>
+<td>Charge events</td>
+<td></td>
+<td></td>
+<td>The charge began, but did not complete successfully</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>862</td>
+<td>ERROR: Inertial guidance disabled</td>
+<td>1</td>
+<td></td>
+<td>Navigation errors</td>
+<td></td>
+<td></td>
+<td>Insufficient inertial systems available for navigation.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>863</td>
+<td>ERROR: ODS fault detected</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>The ODS has reported a fault</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>864</td>
+<td>ERROR: BMS Inoperable</td>
+<td>1</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>The BMS has reported a fault and become inoperable</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>865</td>
+<td>INFO: BMS Temperature sensor diagnostic triggered</td>
+<td>0</td>
+<td></td>
+<td>Generic Events</td>
+<td></td>
+<td></td>
+<td>The BMS has reported a higher temperature on the secondary temperature sensor than on the primary temperature sensor</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>9</td>
+<td>INFO: Parameter not consistent with other parameters.</td>
+<td>0</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td></td>
+<td>The parameter that FCX was trying to set is not consistent with other parameters on the DU.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>98</td>
+<td>ERROR: Station keeping with non zero velocity</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>ML</td>
+<td>The DU attempted to hold the position even though it was moving. This is a FW bug.</td>
+<td></td>
+</tr>
+<tr>
+<td>DU</td>
+<td>99</td>
+<td>ERROR: Internal FW event</td>
+<td>3</td>
+<td></td>
+<td>Command and Logic Errors</td>
+<td></td>
+<td>OML</td>
+<td>Internal FW event.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2000</td>
+<td>COMMUNICATION_TIMEOUT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Packets from the drive to the DUA are not being received in a timely manner.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2001</td>
+<td>WAIT_FOR_ACKNOWLEDGE_TIMEOUT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive is not acknowledging receipt of a command.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2002</td>
+<td>FATAL_COMM_TIMEOUT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Capabilities have been lost due to a loss of communications with the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2003</td>
+<td>CHANGE_UDP_ADDRESS_TIMEOUT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive did not respond to ChangeUdpAddress by the first timeout since DC startup.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2005</td>
+<td>TOO_MANY_ERRORS</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive is reporting too many errors to process.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2006</td>
+<td>DRIVE_INTERRUPTED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive is reporting a second recovery error while attempting to recover.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2007</td>
+<td>CE_FLOOR_WITH_NON_CE_DRIVE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive firmware is too old to support querying for the DUSC mode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2008</td>
+<td>BAD_RESPONSE_MESSAGE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>DUA received out of sequence or stale message while waiting for command completion and may retry.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2026</td>
+<td>DRIVE_NOT_MANAGED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive is not managed. Manage the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2027</td>
+<td>DRIVE_NOT_SYSTEM_OWNED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive is not system owned. Release the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2028</td>
+<td>DRIVE_MANAGED_BY_ANOTHER_USER</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive is owned by another user. Transfer ownership to yourself and then try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2029</td>
+<td>DC_ERROR_DISABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller was disabled due to an error received from the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2030</td>
+<td>DRIVE_USER_DISABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller was disabled by a user.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2031</td>
+<td>DRIVE_SYSTEM_DISABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller was disabled by the system.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2032</td>
+<td>DRIVE_READY_FOR_ENABLE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive is ready to be enabled.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2033</td>
+<td>FIRMWARE_UPDATE_STARTED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Firmware update started.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2034</td>
+<td>FIRMWARE_UPDATE_SUCCESSFUL</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Firmware update completed successfully.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2035</td>
+<td>FIRMWARE_UPDATE_FAILED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Firmware update completed unsuccessfully.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2100</td>
+<td>FLOOR_BARCODE_NOT_FOUND</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>No floor barcode was seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2101</td>
+<td>FLOOR_BARCODE_UNREADABLE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>A floor barcode was visible but could not be read.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2102</td>
+<td>UNKNOWN_FIDUCIAL_BARCODE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>A floor barcode was seen but it does not match a known barcode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2103</td>
+<td>UNEXPECTED_FLOOR_BARCODE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The observed floor barcode does not match the expected floor barcode.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2104</td>
+<td>POD_BARCODE_NOT_FOUND</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>No pod barcode was seen.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2105</td>
+<td>POD_BARCODE_UNREADABLE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>A pod barcode was visible but could not be read.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2106</td>
+<td>TOO_MANY_FIDUCIALS_IN_ONE_COMMAND</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>There are too many fiducials in a single Straight command. Either the map has too many fiducials too close together or the Segment Coordinator is granting segments that are too long.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2107</td>
+<td>FIRMWARE_PROTOCOL_REVISION_TOO_OLD</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>CML</td>
+<td>The protocol revision read from the drive is too old to work with this release of the MHS software.  The firmware on this drive must be updated to operate with this MHS.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2200</td>
+<td>UNRECOVERABLE_POD_SHIFT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The pod shift error cannot be safely executed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2300</td>
+<td>DOCK_WITH_CHARGER_FAILED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Despite multiple retries the drive was unable to dock with the charger and receive charge.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2301</td>
+<td>EQUALIZATION_FAILED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Despite hours in the charger attempting to top-off the batteries and start equalization fewer then 60 seconds of EQ seconds had accumulated.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2302</td>
+<td>SHUTDOWN_FOR_CHARGING_ERRORS</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive shutdown because of significant charging failures. This is either charging errors at more than one charger or a failure to top-off batteries and begin collecting equalization seconds.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2303</td>
+<td>CONFD_DRIVE_MODEL_NAME_MISMATCH</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>CML</td>
+<td>Drive has become disabled because the name that was broadcast by the drive does not match the allowed configured drive type in Confd.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2304</td>
+<td>DUA_WAS_DENIED_A_SEGMENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit can not obtain the space to execute a command (possible expansion joint).</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2305</td>
+<td>DRIVE_NOT_SRBRS_ENABLED</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>Drive has become disabled because the system has SRBRS Enabled - but the drive is not reporting it has SRBRS hardware.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2306</td>
+<td>SRBRS_RADIO_VALUES_DO_NOT_MATCH</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>Drive has become disabled because the Left and Right radio values differ.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2307</td>
+<td>SRBRS_RADIO_NOT_ALLOWED_FOR_TYPE</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>Drive has become disabled because allowed value(s) for radio type (Slow/Stop) have a different frequency than the drive is reporting.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2308</td>
+<td>SRBRS_RADIO_NOT_ALLOWED_FOR_DOMAIN</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>Drive has become disabled because the system configured SRBRS Domain (NA, EU, ...) has different frequencies than the drive is reporting.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>2309</td>
+<td>SRBRS_FIRMWARE_HAS_ERROR</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>ML</td>
+<td>Drive has become disabled because the firmware has reported an error when registering. Typically this error is for HW boards not at the same rev level (i.e., Version Mismatch).</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>3000</td>
+<td>WRONG_FIDUCIAL_TYPE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive cannot be enabled because it is over an incompatible type of fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>3001</td>
+<td>CANNOT_REACH_DESTINATION</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive cannot reach the requested destination from its current location.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4000</td>
+<td>DRIVE_UNIT_AGENT_STARTED</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has just started up.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4001</td>
+<td>DRIVE_UNIT_AGENT_SHUTTING_DOWN</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has just started up.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4002</td>
+<td>DRIVE_UNIT_AGENT_DISABLED</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has become disabled.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4003</td>
+<td>DRIVE_UNIT_AGENT_ENABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has been enabled.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4004</td>
+<td>DRIVE_UNIT_AGENT_ENTERED_COMMS_ECOVERY</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has lost comms synchronization with the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4005</td>
+<td>DRIVE_UNIT_AGENT_ENTERED_NORMAL_COMMS_STATE</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has achieved a synchronized comms state.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4006</td>
+<td>DRIVE_UNIT_SHUTTING_DOWN</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit has shut down.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4007</td>
+<td>DRIVE_UNIT_AGENT_LOST_CAPABILITIES</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent has lost capabilities.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>4008</td>
+<td>DRIVE_UNIT_REMOVED</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive unit was successfully removed.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>5001</td>
+<td>DRIVE_UNIT_AGENT_SYSTEM_OWNED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent switched control to system owned.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>5002</td>
+<td>DRIVE_UNIT_AGENT_USER_OWNED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent switched control to user owned.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>5003</td>
+<td>DRIVE_UNIT_AGENT_USER_BORROWED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive unit agent switched control to user borrowed</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6000</td>
+<td>RECOVERY_KEY_MISMATCH</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The recovery key in the activity does not match the activity key currently set by the DriveController.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6002</td>
+<td>POD_TRANS_TOO_LARGE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive experienced a large translation when lowering a pod.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6003</td>
+<td>OWNERSHIP_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive controller has a user id which does not match the execution activity user id.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6004</td>
+<td>CAPABILITIES_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct capabilities needed to execute an ASM</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6005</td>
+<td>STARTING_LOCATION_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct starting location needed to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6006</td>
+<td>LIFTER_STATE_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct lifter state needed to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6007</td>
+<td>DOCK_STATE_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct dock state needed to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6008</td>
+<td>DRIVE_ORIENTATION_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct drive orientation needed to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6009</td>
+<td>POD_ORIENTATION_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the pod orientation needed to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6010</td>
+<td>SAFETY_STATE_INCONSISTENT</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive did not have the correct DUSC state to execute an ASM.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6011</td>
+<td>DC_DISABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive controller is disabled.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6012</td>
+<td>DOCK_TO_CHARGER_FAIL</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive failed to dock with a charger.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6013</td>
+<td>FLOOR_SAFETY_STATE_CHANGE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The safety state of the system changed, resulting in ASM failure. Most likely cause is an e-stop.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6014</td>
+<td>CANCEL_REQUESTED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The EC requested a cancellation of the activity for an otherwise unknown reason.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6015</td>
+<td>OWNERSHIP_CHANGE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The ownership of the DC changed while an activity was in execution.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6016</td>
+<td>DRIVE_CONTROLLER_DISABLED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller was disabled externally while an activity was in execution.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6017</td>
+<td>DRIVE_SCRIPT_EXECUTION_FAILED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller has failed to run an external script.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6018</td>
+<td>DRIVE_SCRIPT_EXECUTION_SUCCEEDED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The Drive Controller has successfully finished an external script.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6020</td>
+<td>ENABLE_THE_DRIVE_CONTROLLER</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the DC is logically disabled. In Service the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6021</td>
+<td>DRIVE_NEEDS_C_CAPABILITY</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive needs the Communication capability 'C'. Wait for the drive to gain Communication and then try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6022</td>
+<td>DRIVE_NEEDS_M_CAPABILITY</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive needs the Move capability 'M'. In Service the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6023</td>
+<td>DRIVE_NEEDS_L_CAPABILITY</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive needs the Lift capability 'L'. In Service the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6024</td>
+<td>DRIVE_NEEDS_O_CAPABILITY</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive needs the Localization capability 'O'. In Service the drive and try again.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6025</td>
+<td>REMOVE_FROM_FLOOR_PENDING</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Activity could not be started because the drive is waiting to be removed from the floor. Wait for the drive to be fully removed, then reboot the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6026</td>
+<td>POD_BARCODE_READ_FAILURE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive controller should be disabled due to pod barcode read failure when a barcode is expected. Usually caused by drive camera issues such as dirty lens.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6028</td>
+<td>DRIVE_TOO_FAR_OFF_FIDUCIAL</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Unable to plan a path from drive's current position. Reposition drive over a fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6029</td>
+<td>LARGE_POD_SHIFT_IN_QUEUE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Unable to automatically recover drive with a large pod shift in a station queue.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6030</td>
+<td>DUPLICATE_IP_ADDRESS</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive controller initialization failure due to duplicate IP address.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6031</td>
+<td>STOP_REPORT_POSITION</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive controller has been instructed to stop reporting drive position.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6032</td>
+<td>RESUME_REPORT_POSITION</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive controller has been instructed to resume reporting drive position.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6033</td>
+<td>INCONSISTENT_LOAD_STATE_WHILE_VIRTUALLY_LOADED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive was verifiably unloaded, but a package was bound</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6034</td>
+<td>INCONSISTENT_LOAD_STATE_WHILE_VIRTUALLY_UNLOADED</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive was verifiably loaded, but no package was bound.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6035</td>
+<td>UNEXPECTED_PACKAGE_ID_CHANGE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>PackageProxy reported an unexpected package ID change.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6036</td>
+<td>FAILED_LOCALIZATION_CHECK</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Drive controller disabled by fiducial mismatch during localization check.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6037</td>
+<td>FIDUCIAL_PROBLEM</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>A floor barcode was seen but could not be trusted due to a fiducial problem.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6038</td>
+<td>DEADLOCKING_DRIVE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive is blocking another drive that is also blocking the drive.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6039</td>
+<td>EJECTOR_ORIENTATION_OUT_OF_PHASE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive's ejector is out of phase with respect to the floor/reference frame.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6040</td>
+<td>CART_FIDUCIAL_READ_FAILURE</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive couldn't read the cart fiducial.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6041</td>
+<td>CART_FIDUCIAL_INVALID</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The cart fiducial read is invalid.</td>
+<td></td>
+</tr>
+<tr>
+<td>DC</td>
+<td>6042</td>
+<td>UNSUPPORTED_SECURITY_PROTOCOL</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>The drive is using an unsupported security protocol (secure/insecure) and must be rebooted.</td>
+<td></td>
+</tr>
+                    <!-- More rows will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+     <div class="footer">
+        <p>&copy; 2025 Made by Christian Sumbillo | Error Codes Database | Designed for Firmware 24.1.0-123</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#searchInput').on('keyup', function () {
+                var value = $(this).val().toLowerCase();
+                $('#errorTableBody tr').filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
