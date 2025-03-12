@@ -129,8 +129,8 @@
             <label>Resolution:
                 <select id="resolution">
                     <option value="640x480">640x480</option>
-                    <option value="1280x720">1280x720</option>
-                    <option value="1920x1080" selected>640x480</option>
+                    <option value="1280x720" selected>1280x720</option>
+                    <option value="1920x1080">1920x1080</option>
                 </select>
             </label>
             <button onclick="takePicture()">📸 Capture</button>
@@ -160,7 +160,7 @@
         const modal = document.getElementById('modal');
         
         async function startCamera() {
-            stream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480 } });
+            stream = await navigator.mediaDevices.getUserMedia({ video: { width: 1280, height: 720 } });
             video.srcObject = stream;
         }
 
